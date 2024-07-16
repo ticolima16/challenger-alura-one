@@ -11,6 +11,10 @@ function validarTexto(texto) {
 }
 
 function criptografar(texto) {
+<<<<<<< HEAD
+=======
+    if (texto !== " ") {
+>>>>>>> fbdb75e (editando JS)
         texto = texto.replace(/a/g, 'ai')
                      .replace(/e/g, 'enter')
                      .replace(/i/g, 'imes')
@@ -22,6 +26,10 @@ function criptografar(texto) {
 }
 
 function descriptografar(texto) {
+<<<<<<< HEAD
+=======
+    if (texto !== " ") {
+>>>>>>> fbdb75e (editando JS)
         texto = texto.replace(/ufat/g, 'u')
                      .replace(/ober/g, 'o')
                      .replace(/imes/g, 'i')
@@ -38,6 +46,7 @@ criptografarBtn.addEventListener('click', function() {
         let textoCriptografado = criptografar(textoEntrada);
         resultado.textContent = textoCriptografado;
     } else {
+<<<<<<< HEAD
         if (textoEntrada == ""){
             titulo.textContent = "<--- Coloque um texto";
             resultado.textContent = "Nenhum texto encontrado";
@@ -47,6 +56,11 @@ criptografarBtn.addEventListener('click', function() {
             copiar_btn.style.display = "none";
             titulo.textContent = "Siga as REGRAS!"; 
         }
+=======
+        resultado.textContent = "Texto inválido. Use apenas letras minúsculas e espaços.";
+        copiar_btn.style.display = "none";
+        titulo.textContent = "Siga as REGRAS!"; 
+>>>>>>> fbdb75e (editando JS)
     }
 });
 
@@ -56,6 +70,7 @@ descriptografarBtn.addEventListener('click', function() {
         let textoDescriptografado = descriptografar(textoEntrada);
         resultado.textContent = textoDescriptografado;
     } else {
+<<<<<<< HEAD
             if (textoEntrada == ""){
                 titulo.textContent = "<--- Coloque um texto";
                 resultado.textContent = "Nenhum texto encontrado";
@@ -65,6 +80,11 @@ descriptografarBtn.addEventListener('click', function() {
                 copiar_btn.style.display = "none";
                 titulo.textContent = "Siga as REGRAS!"; 
             }
+=======
+        resultado.textContent = "Texto inválido. Use apenas letras minúsculas e espaços.";
+        copiar_btn.style.display = "none";
+        titulo.textContent = "Siga as REGRAS!"; 
+>>>>>>> fbdb75e (editando JS)
     }
 });
 
