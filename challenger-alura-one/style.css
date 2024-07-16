@@ -26,6 +26,7 @@
 #texto {
     background: transparent;
     border: 1px solid #ccc;
+    color: white;
     height: 250px;
     width: 250px;
     font-size: 0.875em;
