@@ -6,12 +6,11 @@ let resultado = document.querySelector('.resultado_des');
 let titulo = document.querySelector('.container__resultado > h2');
 
 function validarTexto(texto) {
-    let regex = /^[a-z ]+$/;
-    return regex.test(texto);
+        let regex = /^[a-z ]+$/;
+        return regex.test(texto);
 }
 
 function criptografar(texto) {
-    if (texto !== "") {
         texto = texto.replace(/a/g, 'ai')
                      .replace(/e/g, 'enter')
                      .replace(/i/g, 'imes')
@@ -20,12 +19,9 @@ function criptografar(texto) {
         copiar_btn.style.display = "block"; 
         titulo.textContent = "Criptografado";        
         return texto;
-    }
-    return 'Nenhum texto encontrado';
 }
 
 function descriptografar(texto) {
-    if (texto !== "") {
         texto = texto.replace(/ufat/g, 'u')
                      .replace(/ober/g, 'o')
                      .replace(/imes/g, 'i')
@@ -34,8 +30,6 @@ function descriptografar(texto) {
         copiar_btn.style.display = "block";
         titulo.textContent = "Descriptografado";     
         return texto;
-    }
-    return 'Nenhum texto encontrado';
 }
 
 criptografarBtn.addEventListener('click', function() {
@@ -44,9 +38,15 @@ criptografarBtn.addEventListener('click', function() {
         let textoCriptografado = criptografar(textoEntrada);
         resultado.textContent = textoCriptografado;
     } else {
-        resultado.textContent = "Texto inválido. \nUse apenas letras minúsculas e espaços.";
-        copiar_btn.style.display = "none";
-        titulo.textContent = "Siga as REGRAS!"; 
+        if (textoEntrada == ""){
+            titulo.textContent = "<--- Coloque um texto";
+            resultado.textContent = "Nenhum texto encontrado";
+            copiar_btn.style.display = "none";
+        }else{
+            resultado.textContent = "Texto inválido.";
+            copiar_btn.style.display = "none";
+            titulo.textContent = "Siga as REGRAS!"; 
+        }
     }
 });
 
@@ -56,8 +56,15 @@ descriptografarBtn.addEventListener('click', function() {
         let textoDescriptografado = descriptografar(textoEntrada);
         resultado.textContent = textoDescriptografado;
     } else {
-        resultado.textContent = "Texto inválido. Use apenas letras minúsculas e espaços.";
-        copiar_btn.style.display = "none";
+            if (textoEntrada == ""){
+                titulo.textContent = "<--- Coloque um texto";
+                resultado.textContent = "Nenhum texto encontrado";
+                copiar_btn.style.display = "none";
+            }else{
+                resultado.textContent = "Texto inválido.";
+                copiar_btn.style.display = "none";
+                titulo.textContent = "Siga as REGRAS!"; 
+            }
     }
 });
 
