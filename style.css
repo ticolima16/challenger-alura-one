@@ -25,6 +25,10 @@ header{
     align-items: center;
     padding-bottom: 10px;
 }
+.header__img img:first-child{
+    border-right: 1px solid var(--cor-clara);
+    padding-right: 7px;
+}
 .header_social_link{
     max-width: 100%;
     display: flex;
