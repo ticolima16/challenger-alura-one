@@ -4,15 +4,19 @@
     margin: 0;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-decoration: none;
-    background-color: black;
+    background-color: var(--cor-escura)
+}
+:root{
+    --cor-clara: #8c998b;
+    --cor-escura: black;
 }
 header{
     max-width: 1010px;
-    margin: 0 auto;
+    margin: 10px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom:1px solid #ccc ;
+    border-bottom:1px solid var(--cor-clara) ;
     align-items: center;
 }
 .header__img{
@@ -30,7 +34,7 @@ header{
 
 }
 .header_social_link a{
-    color: #ccc;
+    color: var(--cor-clara);
 }
 .container{
     margin: 90px auto;
@@ -38,7 +42,7 @@ header{
     display: flex;
     gap: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-clara);
 
 }
 .container__texto{
@@ -53,7 +57,7 @@ header{
 }
 
 .btn{
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-clara);
     padding: 10px 10px;
     color: white;
     cursor: pointer;
@@ -63,12 +67,12 @@ header{
     display: none;
 }
 .btn:hover{
-    background-color: #ccc;
-    color: black;
+    background-color: var(--cor-clara);
+    color: var(--cor-escura)
 }
 #texto {
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-clara);
     color: white;
     height: 250px;
     max-width: 400px;
@@ -82,7 +86,7 @@ header{
 }
 .container__resultado{
     width: 100%;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-clara);
     color: white;
     display: flex;
     flex-direction: column;
@@ -92,10 +96,10 @@ header{
 }
 .footer_social{
     max-width: 1010px;
-    color: #ccc;
+    color: var(--cor-clara);
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-clara);
 }
 .footer_social p{
     margin: 10px 10px;
