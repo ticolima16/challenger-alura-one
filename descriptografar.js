@@ -4,6 +4,7 @@ let descriptografarBtn = document.querySelector('.descriptografar');
 let copiar_btn = document.querySelector('.copiar_btn');
 let resultado = document.querySelector('.resultado_des');
 let titulo = document.querySelector('.container__resultado > h2');
+const avisoMSG = '<br><br><p>Não devem ser utilizados letras com acentos, maiúsculas e caracteres especiais</p>';
 
 function validarTexto(texto) {
         let regex = /^[a-z ]+$/;
@@ -44,6 +45,7 @@ criptografarBtn.addEventListener('click', function() {
             copiar_btn.style.display = "none";
         }else{
             resultado.textContent = "Texto inválido.";
+            resultado.innerHTML += avisoMSG;
             copiar_btn.style.display = "none";
             titulo.textContent = "Siga as REGRAS!"; 
         }
@@ -57,11 +59,12 @@ descriptografarBtn.addEventListener('click', function() {
         resultado.textContent = textoDescriptografado;
     } else {
             if (textoEntrada == ""){
-                titulo.textContent = "<--- Coloque um texto";
+                titulo.textContent = "Coloque um texto";
                 resultado.textContent = "Nenhum texto encontrado";
                 copiar_btn.style.display = "none";
             }else{
                 resultado.textContent = "Texto inválido.";
+                resultado.innerHTML += avisoMSG;
                 copiar_btn.style.display = "none";
                 titulo.textContent = "Siga as REGRAS!"; 
             }
