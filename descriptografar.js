@@ -40,7 +40,7 @@ criptografarBtn.addEventListener('click', function() {
         resultado.textContent = textoCriptografado;
     } else {
         if (textoEntrada == ""){
-            titulo.textContent = "<--- Coloque um texto";
+            titulo.textContent = "Coloque um texto";
             resultado.textContent = "Nenhum texto encontrado";
             copiar_btn.style.display = "none";
         }else{
