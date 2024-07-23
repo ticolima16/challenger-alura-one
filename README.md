@@ -3,7 +3,7 @@
 <h1>Challenger Alura e ONE</h1>
 
 <h2>Sobre</h2>
-<p>Desafio Alura para por em pratica os conhecimentos do curso logica de programacao</p>
+<p>Desafio Alura para por em pratica os conhecimentos do curso Iniciante em Programação T7 - ONE</p>
 Projeto on-line:
 https://ticolima16.github.io/challenger-alura-one/
 
